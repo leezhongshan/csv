@@ -1,5 +1,6 @@
 #include "csv2.h"
 #include <iostream>
+#include <functional>
 
 typedef std::function< void(bool bSuccess, const std::vector<std::string>& cols, int nLine, const std::string& strError) >  CsvRowFn_t;
 
