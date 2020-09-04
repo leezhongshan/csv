@@ -2,9 +2,11 @@
 usage:
 
 io::CSVReader<io::trim_chars<' ', '\t'>, io::double_quote_escape<',', '"'>>  reader( strFile.c_str() );
+std::vector<std::string> header = { "col1", "col2","col3"};
 
 try
 {
+    
     reader.read_header(io::ignore_extra_column, header);
 }
 catch (io::error::missing_column_in_header& e)
