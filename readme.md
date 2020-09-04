@@ -2,6 +2,7 @@
 usage:
 
 io::CSVReader<io::trim_chars<' ', '\t'>, io::double_quote_escape<',', '"'>>  reader(strFile.c_str());
+
 try
 {
     reader.read_header(io::ignore_extra_column, header);
