@@ -19,7 +19,6 @@ catch (io::error::base& e)
 
 }
 
-
 std::vector<std::string> cols;
 cols.resize(header.size());
 
@@ -27,25 +26,14 @@ while (true)
 {
     try
     {
-
         if (!reader.read_row(cols))
         {
             break;
         }
-
-
-
     }
     catch (io::error::escaped_string_not_closed& e)
-    {
-
-    }
+    {  }
     catch (io::error::base& e)
-    {
-
-
-    }
+    { }
     
-  }
-
-	
+  }	
